@@ -1,4 +1,4 @@
-[![Build Status](https://drone.io/github.com/geb/geb-example-gradle/status.png)](https://drone.io/github.com/geb/geb-example-gradle/latest)
+[![Build Status](https://drone.io/github.com/keisatou/geb-example-gradle-yahoo/status.png)](https://drone.io/github.com/keisatou/geb-example-gradle-yahoo/latest)
 
 # Description
 
@@ -9,15 +9,16 @@ The build is setup to work with Firefox, Chrome and PhantomJS. Have a look at th
 # Usage
 
 The following commands will launch the tests with the individual browsers:
-    
+
     ./gradle chromeTest
     ./gradle firefoxTest
     ./gradle phantomJsTest
 
 To run single test:
-    gradle -DfirefoxTest.single=YahooTopSpec firefoxTest
-    gradle -DchromeTest.single=YahooTopSpec chromeTest
-    gradle -Dtest.single=YahooTopSpec test
+
+    gradle -DfirefoxTest.single=YahooShoppingSpec firefoxTest
+    gradle -DfirefoxTest.single=YahooSearchSpec firefoxTest
+    gradle -DfirefoxTest.single=YahooCommonSpec firefoxTest
 
 To run with all, you can run:
 
