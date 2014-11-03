@@ -1,7 +1,7 @@
 import spock.lang.*
 import geb.spock.GebReportingSpec
 
-class YahooTopSpec extends GebReportingSpec {
+class YahooCommonSpec extends GebReportingSpec {
     def "can get to the top page of Yahoo! Japan"() {
         when:
         to YahooTopPage
@@ -9,6 +9,9 @@ class YahooTopSpec extends GebReportingSpec {
         then:
         at YahooTopPage
     }
+}
+
+class YahooShoppingSpec extends YahooCommonSpec {
 
     def "can get to the top page of Yahoo! Shopping"() {
         given:
@@ -20,7 +23,9 @@ class YahooTopSpec extends GebReportingSpec {
         then:
         at YahooShoppingPage
     }
+}
 
+class YahooSearchSpec extends YahooCommonSpec {
     def "can get to the top page of Yahoo! Search"() {
         given:
         to YahooSearchTopPage
@@ -30,15 +35,5 @@ class YahooTopSpec extends GebReportingSpec {
 
         then:
         at YahooLoginPage
-    }
-}
-
-class YahooTopOnlySpec extends GebReportingSpec {
-    def "can get to the top page of Yahoo! Japan"() {
-        when:
-        to YahooTopPage
-
-        then:
-        at YahooTopPage
     }
 }
